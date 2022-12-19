@@ -37,6 +37,22 @@ header {
     padding: 30px;
 }
 
+li {
+    width: 223px;
+    transition-duration: 0.9s;
+}
+
+li:hover {
+    font-weight: bolder;
+    margin-left: 15px;
+    text-decoration: underline;
+    transition-duration: 0.4s;
+}
+
+li:active {
+    background-image: linear-gradient(to right, rgba(0, 0, 255, 0.747), transparent);
+}
+
 header > h1 {
     color: white;
     font-family: var(--fontedestaque);
@@ -182,6 +198,19 @@ aside > ul {
     list-style-type: '\2714\00A0\00A0';
     list-style-position: inside;
     columns: 2;
+}
+
+p#despedida {
+    background-color: rgba(0, 68, 255, 0.219);
+    border-radius: 5px;
+    padding: 5px;
+    transition-duration: 1s;
+}
+
+#despedida:hover {
+    font-weight: bold;
+    background-color: rgba(0, 68, 255, 0.774);
+    transition-duration: 1s;
 }
 
 footer {
