@@ -5,10 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela populacional</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 80%;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        thead {
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+
+         th {
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 4px;
+        }
+        .Porcentagem {
+            color: green;
+        }
+        caption {
+            background-color: rgba(128, 128, 128, 0.308);
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 5px 0px 5px 0px
+        }
+
+    </style>
 </head>
 <body>
     <!--             ESTRUTURA DAS TABELAS GRANDES
+
                 <table>
+                    <caption> -> Titulo da tabela.
                     <thead>
                         <tr> , <td> e <th>
                     </thead>
@@ -23,15 +62,16 @@
                 </table>
     -->
     <table>
+        <caption>Lista de unidades federativas do Brasil por população</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Unidade Federativa</th>
-                <th>População Censo 2010</th>
-                <th>População Prévia 2022</th>
-                <th>Mudança %</th>
-                <th>% da pop total</th>
-                <th>País comparável</th>
+                <th scope="col">Posição</th>
+                <th scope="col">Unidade Federativa</th>
+                <th scope="col">População Censo 2010</th>
+                <th scope="col">População Prévia 2022</th>
+                <th scope="col">Mudança %</th>
+                <th scope="col">% da pop total</th>
+                <th scope="col">País comparável</th>
             </tr>
         </thead>
 
@@ -41,9 +81,19 @@
                 <td>São Paulo</td>
                 <td>41 262 199</td>
                 <td>46 024 937</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="Porcentagem">+11.5%</td>
+                <td>22,2%</td>
+                <td>Espanha (46 754 778)</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Minas Gerais</td>
+                <td>19 597 330</td>
+                <td>20 732 660</td>
+                <td class="Porcentagem">+5.8%</td>
+                <td>10,0%</td>
+                <td>Burquina Fasso (20 903 273)</td>
             </tr>
         </tbody>
 
