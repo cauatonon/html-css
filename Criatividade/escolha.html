@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Escolha um site</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #007bff;
+            transition: background-color 0.2s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0062cc;
+        }
+
+        .btn-clean {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .btn-clean:hover {
+            background-color: #e2e6ea;
+        }
+
+        .logo {
+            margin: 10px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #objetivo {
+            margin-right: 10px;
+            width: 175px;
+            height: 100x;
+        }
+
+        #cursoemvideo {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Boa Tarde Cauã, aonde irá estudar ?</h1>
+        <div class="row">
+            <img src="OBJ/objetivo-logo.png" alt="" class="logo" id="objetivo">
+            <a class="btn" href="https://www.objetivo.br/" target="_blank">Objetivo</a>
+        </div>
+        <div class="row">
+            <img src="OBJ/curso-em-video-logo.jpg" alt="" class="logo" id="cursoemvideo">
+            <a class="btn btn-clean" href="https://www.cursoemvideo.com/meus-cursos/" target="_blank">Curso em Vídeo</a>
+        </div>
+    </div>
+
+    <script>
+        var btnObjetivo = document.querySelector('.btn');
+        btnObjetivo.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open('https://www.objetivo.br/', '_blank');
+        });
+
+        var btnCursoEmVideo = document.querySelector('.btn-clean');
+        btnCursoEmVideo.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open('https://www.cursoemvideo.com/meus-cursos/', '_blank');
+        });
+    </script>
+</body>
+
+</html>
