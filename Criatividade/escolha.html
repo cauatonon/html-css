@@ -5,8 +5,11 @@
     <title>Escolha um site</title>
     <style>
         body {
-            background-color: #f5f5f5;
+            background-color: burlywood;
         }
+         h1 {
+            font-size: x-large;
+         }
 
         .container {
             display: flex;
@@ -16,70 +19,98 @@
             height: 100vh;
         }
 
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color:moccasin
+        }
+
         .btn {
             display: inline-block;
             padding: 20px 40px;
             font-size: 24px;
-            border: 1px solid blue;
+            border: none;
             border-radius: 8px;
             cursor: pointer;
             color: #fff;
-            background-color: #007bff;
+            background-color: #2e6aaa;
             transition: background-color 0.2s;
             text-decoration: none;
         }
 
         .btn:hover {
-            background-color: #0062cc;
+            background-color: #9fa8b3b0;
         }
 
         .btn-clean {
-            background-color: #6ea1d4;
-            color: #ffffff;
+            background-color: #f9f8fa;
+            color: #212529;
         }
 
         .btn-clean:hover {
-            background-color: #2976c2;
-        }
-
-        .logo {
-            margin: 10px;
-        }
-
-        .row {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            border: 1px solid black;
-            border-radius: 7px;
+            background-color: #e2e6ea;
         }
 
         #objetivo {
-            margin-right: 10px;
-            width: 175px;
-            height: 100x;
+            width: 200px;
+            height: 100px;
+            margin-right: 20px;
         }
 
         #cursoemvideo {
-            margin-left: 10px;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        #mepoupe {
+            width: 200px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        #investimentos {
+            background-color: #6614a8;
+            color: white;
+            border: 1px solid purple;
+        }
+
+        #programacao {
+            background-color: blue;
+            color: white;
+            border: 1px solid rgb(0, 4, 255);
+        }
+
+        #obj {
+            border: 1px solid blue;
+        }
+
+        #programacao:hover , #investimentos:hover {
+             background-color: #9fa8b3b0;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Boa Tarde Cauã, aonde irá estudar ?</h1>
-        <div class="row">
-            <img src="OBJ/objetivo-logo.png" alt="" class="logo" id="objetivo">
-            <a class="btn" href="https://www.objetivo.br/" target="_blank">Objetivo</a>
+        <h1>Escolha um site:</h1>
+        <div class="btn-container">
+            <img src="OBJ/objetivo-logo.png" alt="" id="objetivo">
+            <a class="btn" href="https://www.objetivo.br/" target="_blank" id="obj">Objetivo</a>
         </div>
-        <div class="row">
-            <img src="OBJ/curso-em-video-logo.jpg" alt="" class="logo" id="cursoemvideo">
-            <a class="btn btn-clean" href="https://www.cursoemvideo.com/meus-cursos/" target="_blank">Curso em Vídeo</a>
+        <div class="btn-container">
+            <img src="OBJ/curso-em-video-logo.jpg" alt="" id="cursoemvideo">
+            <a class="btn btn-clean" href="https://www.cursoemvideo.com/meus-cursos/" target="_blank" id="programacao">Curso em Vídeo</a>
+        </div>
+        <div class="btn-container">
+            <img src="OBJ/me-poupe.webp" alt="" id="mepoupe">
+            <a class="btn btn-clean" href="https://mepoupe.com/" target="_blank" id="investimentos">Me Poupe!</a>
         </div>
     </div>
-
     <script>
         var btnObjetivo = document.querySelector('.btn');
         btnObjetivo.addEventListener('click', function (e) {
@@ -91,6 +122,12 @@
         btnCursoEmVideo.addEventListener('click', function (e) {
             e.preventDefault();
             window.open('https://www.cursoemvideo.com/meus-cursos/', '_blank');
+        });
+
+        var btnMePoupe = document.querySelectorAll('.btn-clean')[1];
+        btnMePoupe.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open('https://mepoupe.com/', '_blank');
         });
     </script>
 </body>
